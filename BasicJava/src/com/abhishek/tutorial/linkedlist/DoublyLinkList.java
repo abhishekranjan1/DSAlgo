@@ -31,10 +31,19 @@ public class DoublyLinkList{
 		}
 		else
 		{
-			root=current.next;
-			current.next.prev=null;
-			return current;
+			if(root.next==null)
+			{
+				root=null;
+				return root;
+			}
+			
+			else
+			{
+				root=current.next;
+				current.next.prev=null;	
+			}		
 		}
+		return current;
 	}
 	
 	
@@ -128,8 +137,17 @@ public class DoublyLinkList{
                }
                else
                {
-            	   prev.next=current.next;
-            	   current.next.prev=prev;
+            	      if(current.next==null)
+            	      {
+            	    	  	prev.next=null;
+            	    	  	
+            	      }
+            	      else
+            	      {
+            	    	  	   prev.next=current.next;
+                   	   current.next.prev=prev;
+            	      }
+            	  
                }
         return current;
 		}

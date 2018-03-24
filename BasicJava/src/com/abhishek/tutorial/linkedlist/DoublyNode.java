@@ -48,25 +48,26 @@ public class DoublyNode {
 //		 newList.removeAtEnd();
 //		 newList.removeAtEnd();
 //		 newList.removeAtEnd();
-//		 newList.removeAtEnd();
-//		
+//      	 newList.removeAtEnd();
+//	
 		
-	//	newList.removeAfter(28);
-	//	newList.removeAfter(35);
+		newList.removeAfter(28);
+		newList.removeAfter(35);
+		newList.removeAfter(586);
 		//newList.removeAfter(586);
-		//newList.removeAfter(586);
 	//	newList.removeAfter(35);
-		//newList.removeAtBeg();
-	  //  newList.removeAtBeg();
-		//newList.removeAtBeg();
-		//newList.removeAtBeg();
+//		newList.removeAtBeg();
+//	   newList.removeAtBeg();
+//		newList.removeAtBeg();
+//		newList.removeAtBeg();
 //		newList.removeAtBeg();
 		//newList.append(88);
 		//newList.append(96);
 		
 		// newList.removeAtEnd();
 	//newList.removeAtEnd();
-	    newList.display();
+	    System.out.println("Content of the Doubly Linked List are:");
+		newList.display();
 		
 		
 	}

@@ -29,7 +29,12 @@ public class Node {
 		tree.addNode(12);
 		tree.addNode(34);
 		tree.addNode(112);
+		tree.removeNode(85);
 		tree.inOrderTraversal(tree.root);
+		System.out.println("-----------------------");
+		tree.postOrderTraversal(tree.root);
+		System.out.println("-----------------------");
+		tree.preOrderTraversal(tree.root);
 	}
 
 }
