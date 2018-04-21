@@ -132,21 +132,53 @@ public class LinkList{
 
     	}
     }
-    void addAfter(int data,int nodeData)
+//    void addAfter(int data,int nodeData)
+//    {
+//    	Node newNode= new Node(data);
+//    	Node current=root;
+//    	Node prev=root;
+//    	if(root==null)
+//    	{
+//    		root=newNode;
+//    		newNode.next=null;
+//    	}
+//    	else
+//    	{
+//    		
+//    	}
+//    	
+//    }
+    
+    void reverseLinkedList()
     {
-    	Node newNode= new Node(data);
-    	Node current=root;
-    	Node prev=root;
-    	if(root==null)
-    	{
-    		root=newNode;
-    		newNode.next=null;
-    	}
-    	else
-    	{
-    		
-    	}
-    	
+    	     Node prev=null;
+    	     Node current=root;
+    	     Node nexttoCurrentNode=null;
+    	     
+    	     if(root==null)
+    	     {
+    	    	
+    	 			System.out.println("Linkedlist is Empty!!");
+    	 			return;
+    	 	}
+    	     else
+    	     {
+    	    	   
+    	    	   while(current!=null)
+    	    	    {
+    	    		  //Store the next node to current in "nexttoCurrentNode" so that when we point 
+    	    		  //current Node's next Node to prev we can still traverse through the list
+    	    		  nexttoCurrentNode=current.next;
+    	    	    	  //reverse the link from current going to the prev link
+    	    		  current.next=prev;
+    	    		  //Move prev to current Node
+    	    	    	  prev=current;
+    	    	    	  //Move current Node to it's "original" next Node
+    	    	    	  current=nexttoCurrentNode;
+    	    	    	  
+    	    	    }
+    	    	    root=prev;
+    	     }
     }
 
 }

@@ -47,9 +47,9 @@ public class Node {
 		// newList.removeAtEnd();
 		
 		
-		newList.removeAfter(28);
-		newList.removeAfter(35);
-		newList.removeAfter(586);
+//		newList.removeAfter(28);
+//		newList.removeAfter(35);
+//		newList.removeAfter(586);
 		//newList.removeAfter(586);
 	//	newList.removeAfter(35);
 //		newList.removeAtBeg();
@@ -62,7 +62,11 @@ public class Node {
 		
 		// newList.removeAtEnd();
 	//newList.removeAtEnd();
-	    newList.display();
+	    
+		newList.display();
+		System.out.println("Reversed Linked List:-------");
+		newList.reverseLinkedList();
+		newList.display();
 		
 		
 	}
