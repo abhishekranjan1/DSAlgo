@@ -1,41 +1,68 @@
 package com.abhishek.tutorial.udemy.graph.mazesolver;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class FileReaderCustom {
 	
 	private String fileName;
-	private int startPoint;
-	private int endPoint;
+	private int startRow;
+	private int startCol;
+	private int noOfRows;
+	private int noOfCols;
 	
 	private int[][] map;
-	
-	
-	
-	public FileReaderCustom(String fileName, int startPoint, int endPoint) {
+
+	public FileReaderCustom(String fileName, int noOfRows, int noOfCols) {
 		super();
 		this.fileName = fileName;
-		this.startPoint = startPoint;
-		this.endPoint = endPoint;
+		this.noOfRows = noOfRows;
+		this.noOfCols = noOfCols;
+		map = new int[noOfRows][noOfCols];
 	}
-	
 	
 	public void parseFile()
 	{
-		
-	}
-	
-	public int getStartPositionRow()
-	{
-		return -1;
-	}
-	
-	public int getStartPositionCol()
-	{
-		return -1;
-	}
-	
-	public int[][] getMap()
-	{
-		return map;
+		try {
+			Scanner scanner = new Scanner(new File(this.fileName));
+			
+			while(scanner.hasNextInt())
+			{
+				for(int i=0;i<noOfRows;i++)
+				{
+				for(int j=0;i<noOfCols;j++)
+				{
+					map[i][j]=scanner.nextInt();
+					if(map[i][j]==2)
+					{
+						startRow=i;
+						startCol=j;
+					}
+				}
+			}
+			}
+		scanner.close();		
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
+	public int getStartRow() {
+		return startRow;
+	}
+
+	public int getStartCol() {
+		return startCol;
+	}
+
+	public int[][] getMap() {
+		return map;
+	}
+	
+	
+	
+	
 }
