@@ -17,8 +17,7 @@ public class DoublyLinkList{
 			    root=newNode;
 			   	root.prev=newNode;
 			   	
-			}
-		
+			}	
 	}
 	public DoublyNode removeAtBeg()
 	{

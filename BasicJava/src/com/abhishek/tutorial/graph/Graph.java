@@ -7,6 +7,7 @@ import java.util.List;
 class Graph{
 	
 	List<Edge> G[];
+	@SuppressWarnings("unchecked")
 	public Graph(int n){
 		G=new LinkedList[n];
 		for(int i=0;i<G.length;i++)

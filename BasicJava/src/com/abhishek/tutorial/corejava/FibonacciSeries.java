@@ -1,7 +1,4 @@
 package com.abhishek.tutorial.corejava;
-
-import java.util.HashMap;
-
 public class FibonacciSeries {
 	
 	private static int[] arr;

@@ -13,8 +13,8 @@ public class SerializationReadObjects {
 		{
 			ObjectInputStream os = new ObjectInputStream(fs);
 			
-			Person p1 = (Person)os.readObject();
-			Person p2 = (Person)os.readObject();
+			Person<?> p1 = (Person<?>)os.readObject();
+			Person<?> p2 = (Person<?>)os.readObject();
 			os.close();
 			
 			System.out.println(p1);

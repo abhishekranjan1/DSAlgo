@@ -27,16 +27,6 @@ public class Node {
 		
 		    }
 
-	
-	/**
-	 * @param args
-	 */
-	/**
-	 * @param args
-	 */
-	/**
-	 * @param args
-	 */
 	public static void main(String args[])
 	{
 		
@@ -61,7 +51,7 @@ public class Node {
 		//newList.append(96);
 		
 		// newList.removeAtEnd();
-	//newList.removeAtEnd();
+		//newList.removeAtEnd();
 	    
 		newList.display();
 		System.out.println("Reversed Linked List:-------");

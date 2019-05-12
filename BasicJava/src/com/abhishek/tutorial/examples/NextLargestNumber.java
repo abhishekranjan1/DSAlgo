@@ -43,8 +43,9 @@ public class NextLargestNumber {
 		return digits;
 	}
 	
+		@SuppressWarnings("unused")
 		private static int digitsToNumber(List<Integer> digits)
-	{
+		{
 		int num = 0;
 		
 		for(Integer digit:digits)
@@ -54,7 +55,7 @@ public class NextLargestNumber {
 		}
 	
 		return num;
-	}
+		}
 		
 		private static void sort(List<Integer> digits, int startIndex, int endIndex) {
 			if (startIndex == endIndex)
