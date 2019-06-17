@@ -10,6 +10,7 @@ public class BinaryTree {
 		{
 			root=newNode;
 			newNode.left=newNode.right=null;
+			return;
 		}
 		else
 		{

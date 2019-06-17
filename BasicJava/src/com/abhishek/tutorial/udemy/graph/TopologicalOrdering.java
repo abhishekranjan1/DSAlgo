@@ -1,17 +1,13 @@
 package com.abhishek.tutorial.udemy.graph;
-
 import java.util.List;
 import java.util.Stack;
 
 public class TopologicalOrdering {
-	
 	private Stack<Vertex> stack;
-	
 	public TopologicalOrdering()
 	{
 		stack = new Stack<>();
 	}
-	
 	public void dfs(List<Vertex> vertices)
 	{
 		for(Vertex v: vertices)
@@ -22,7 +18,6 @@ public class TopologicalOrdering {
 			}
 		}
 	}
-	
 	public void dfsRecursive(Vertex root)
 	{
 		root.setVisited(true);
@@ -33,11 +28,10 @@ public class TopologicalOrdering {
 				dfsRecursive(v);
 			}
 		}
-		stack.push(root);
+	stack.push(root);
 	}
 	public Stack<Vertex> getStack()
 	{
 		return stack;
 	}
-
 }
