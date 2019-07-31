@@ -21,8 +21,7 @@ public class SameLevelLinkingWithQueue {
 					if(actualNode.right!=null) q.add(actualNode.right);			
 					}										
 			} 
-			q.add(null);	
-			
+			q.add(null);				
 		}		
 	}
 }
