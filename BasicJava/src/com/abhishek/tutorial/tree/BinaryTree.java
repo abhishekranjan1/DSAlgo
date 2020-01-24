@@ -12,36 +12,19 @@ public class BinaryTree {
 			newNode.left=newNode.right=null;
 			return;
 		}
-		else
-		{
 			Node current=root;
 			Node parent=root;
-			while(true)
-			{
-				if(data<current.getData())
-				{
-					parent=current;
-					current=current.left;
-					if(current==null)
-					{
-						parent.left=newNode;
-						return;
-					}
-				}
-				else
-				{
-					parent=current;
-					current=current.right;
-					if(current==null)
-					{
-						parent.right=newNode;
-						return;
-					}
-				}
-				
-			}
+
+		while(current!=null){
+			parent = current;
+			if(current.getData() > data)  current = current.left;
+			else current = current.right;
 		}
-	}
+
+		if(parent.getData() > data) parent.left = newNode;
+		else  parent.right = newNode;
+		}
+
 public void inOrderTraversal(Node current)
 {
 	
