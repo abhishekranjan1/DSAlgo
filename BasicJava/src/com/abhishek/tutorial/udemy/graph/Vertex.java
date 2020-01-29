@@ -7,6 +7,7 @@ public class Vertex {
 	private int data;
 	private boolean visited;
 	private List<Vertex> neighborList;
+
 	public int getData() {
 		return data;
 	}

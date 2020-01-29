@@ -34,7 +34,7 @@ private Stack<Vertex> stack;
 	    {
 	    	     if(!v.isVisited())
 	    	     {
-	    	    	 	v.setVisited(true);
+	    	    	 	//v.setVisited(true);
 	    	    	 	dfsRecursive(v);
 	    	     }
 	    }
@@ -43,15 +43,15 @@ private Stack<Vertex> stack;
 	
 	public void dfsWithStack(Vertex root)
 	{
-		
+
 		root.setVisited(true);
 		stack.push(root);
-		
+
 		while(!stack.isEmpty())
 		{
 			Vertex actualVertex = stack.pop();
 			System.out.print(actualVertex+", ");
-			
+
 			for(Vertex v: actualVertex.getNeighborList())
 			{
 				  if(!v.isVisited())
@@ -61,7 +61,7 @@ private Stack<Vertex> stack;
 				  }
 			}
 		}
-		
+
 	}
 
 }

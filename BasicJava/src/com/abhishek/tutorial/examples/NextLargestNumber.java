@@ -15,16 +15,24 @@ public class NextLargestNumber {
 					
 					if(list.get(i)>list.get(i-1))
 					{
-						rightindex = list.get(i);
+						rightindex = i;
 					    break;
 					}
 						
 				}
 		    if(rightindex!=-1)
 		    {
-		    	swap(list,rightindex,rightindex-1);
-		    	sort(list,rightindex,list.size());
+		    	sort(list,rightindex+1,list.size());
+		    	for(int i=rightindex; i< list.size()-1;i++){
+		    		if(list.get(i) < list.get(i+1)){
+						swap(list,i,i+1);
+						break;
+					}
+				}
+
+
 		    }
+			System.out.println(digitsToNumber(list));
 		}
 	
 	

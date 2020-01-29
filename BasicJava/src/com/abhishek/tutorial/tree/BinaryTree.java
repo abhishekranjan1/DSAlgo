@@ -1,8 +1,9 @@
 package com.abhishek.tutorial.tree;
 
+import com.abhishek.tutorial.tree.common.Node;
 public class BinaryTree {
-	
-	Node root;
+
+	public Node root;
 	public void addNode(int data)
 	{
 		Node newNode = new Node(data);
@@ -27,7 +28,6 @@ public class BinaryTree {
 
 public void inOrderTraversal(Node current)
 {
-	
 	if(current!=null)
 	{
 		inOrderTraversal(current.left);
@@ -38,7 +38,6 @@ public void inOrderTraversal(Node current)
 
 public void preOrderTraversal(Node current)
 {
-	
 	if(current!=null)
 	{
 		System.out.println(current.getData());
@@ -49,7 +48,6 @@ public void preOrderTraversal(Node current)
 
 public void postOrderTraversal(Node current)
 {
-	
 	if(current!=null)
 	{
 		postOrderTraversal(current.left);
@@ -90,7 +88,7 @@ public Node removeNode(int data)
 			if(current==root)
 			{
 				root=null;
-				return root;
+				return current;
 			}
 			else
 			{
@@ -112,7 +110,7 @@ public Node removeNode(int data)
 			if(current==root)
 			{
 				root=current.right;
-				return root;
+				return current;
 			}
 			else
 			{
@@ -155,9 +153,9 @@ public Node removeNode(int data)
 		{
 			if(current==root)
 			{
-				root=current.right;
 				current.right.left=root.left;
-				return root;
+				root=current.right;
+				return current;
 			}
 			else
 			{
@@ -178,4 +176,35 @@ public Node removeNode(int data)
 	}
 	return current;
 }
+
+public int height(Node root){
+		if(root==null){
+			return 0;
+		}
+		int leftHeight = height(root.left);
+		int rightHeight = height(root.right);
+
+		return 1+Math.max(leftHeight,rightHeight);
+}
+
+public int kLowest(Node root, int k){
+
+	int[] nums = new int[2];
+	inorder(root,k,nums);
+	return nums[1];
+}
+
+	private void inorder(Node root, int k, int[] nums) {
+		if(root==null) return;
+
+			inorder(root.left,k,nums);
+			if(++nums[0]==k){
+				nums[1]=root.data;
+				return;
+			}
+			inorder(root.right,k,nums);
+
+	}
+
+
 }

@@ -19,7 +19,6 @@ public class BFS {
 		{
 			if(!v.isVisited())
 			{
-				//v.setVisited(true);
 				bfsWithQueue(v);
 			}
 		}
