@@ -13,7 +13,7 @@ public class UtilFunction {
         }
     }
 
-    public static void printSudoku(int[][] board, int N) {
+      void printSudoku(int[][] board, int N) {
         // we got the answer, just print it
         for (int r = 0; r < N; r++) {
             for (int d = 0; d < N; d++) {
@@ -27,4 +27,5 @@ public class UtilFunction {
             }
         }
     }
+
 }

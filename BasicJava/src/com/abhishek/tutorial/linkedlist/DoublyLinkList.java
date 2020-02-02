@@ -78,27 +78,29 @@ public class DoublyLinkList{
 		}
 		
 		}
-			public void append(int data)
-	{
-		DoublyNode newNode = new DoublyNode(data);
-		
-		if(root == null)
+
+
+		public void append(int data)
 		{
-			newNode.next=newNode.prev=null;
-			root=newNode;
-		
-		}
-		else 
+			DoublyNode newNode = new DoublyNode(data);
+
+			if(root == null)
 			{
-			  DoublyNode current = root;   
-				while(current.next!=null)
-					{
-						current=current.next;
-					}
-				current.next=newNode;
-				newNode.next=null;
-				newNode.prev=current;
+				newNode.next=newNode.prev=null;
+				root=newNode;
+
 			}
+			else
+				{
+				  DoublyNode current = root;
+					while(current.next!=null)
+						{
+							current=current.next;
+						}
+					current.next=newNode;
+					newNode.next=null;
+					newNode.prev=current;
+				}
 		
 	}
 	public DoublyNode removeAfter(int data)

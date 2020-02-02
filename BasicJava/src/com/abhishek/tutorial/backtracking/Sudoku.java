@@ -1,6 +1,48 @@
 package com.abhishek.tutorial.backtracking;
 
 public class Sudoku {
+    public static boolean solveSudoku(int[][] board, int n) {
+        int row = -1;
+        int col = -1;
+        boolean isEmpty = true;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (board[i][j] == 0) {
+                    row = i;
+                    col = j;
+
+                    // we still have some remaining
+                    // missing values in Sudoku
+                    isEmpty = false;
+                    break;
+                }
+            }
+            if (!isEmpty) {
+                break;
+            }
+        }
+
+        // no empty space left
+        if (isEmpty) {
+            return true;
+        }
+
+        // else for each-row backtrack
+        for (int num = 1; num <= n; num++) {
+            if (isSafe(board, row, col, num)) {
+                board[row][col] = num;
+                if (solveSudoku(board, n)) {
+                    // print(board, n);
+                    return true;
+                } else {
+                    board[row][col] = 0; // replace it
+                }
+            }
+        }
+        return false;
+    }
+
+
     public static boolean isSafe(int[][] board, int row, int col, int num) {
         // row has the unique (row-clash)
         for (int d = 0; d < board.length; d++) {
@@ -41,47 +83,6 @@ public class Sudoku {
 
         // if there is no clash, it's safe
         return true;
-    }
-
-    public static boolean solveSudoku(int[][] board, int n) {
-        int row = -1;
-        int col = -1;
-        boolean isEmpty = true;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (board[i][j] == 0) {
-                    row = i;
-                    col = j;
-
-                    // we still have some remaining
-                    // missing values in Sudoku
-                    isEmpty = false;
-                    break;
-                }
-            }
-            if (!isEmpty) {
-                break;
-            }
-        }
-
-        // no empty space left
-        if (isEmpty) {
-            return true;
-        }
-
-        // else for each-row backtrack
-        for (int num = 1; num <= n; num++) {
-            if (isSafe(board, row, col, num)) {
-                board[row][col] = num;
-                if (solveSudoku(board, n)) {
-                    // print(board, n);
-                    return true;
-                } else {
-                    board[row][col] = 0; // replace it
-                }
-            }
-        }
-        return false;
     }
 
 
