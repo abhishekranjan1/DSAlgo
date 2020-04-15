@@ -1,7 +1,5 @@
 package com.abhishek.tutorial.aliendictionary;
 
-import java.util.Arrays;
-
 public class AlienDictionaryEasy {
 
      static boolean isAlienSorted(String[] words, String order) {

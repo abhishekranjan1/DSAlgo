@@ -1,6 +1,4 @@
-package com.abhishek.tutorial.tree.common;
-
-import com.abhishek.tutorial.tree.BinaryTree;
+package com.interview.tree.nodedefinition;
 
 public class Node {
 
@@ -8,6 +6,16 @@ public class Node {
 	public int data;
 	public Node left;
 	public Node right;
+
+	public int getHd() {
+		return hd;
+	}
+
+	public void setHd(int hd) {
+		this.hd = hd;
+	}
+
+	public int hd;
 	public int getData() {
 		return data;
 	}
@@ -26,12 +34,12 @@ public class Node {
 	{
 		
 		BinaryTree tree =new BinaryTree();
-		tree.addNode(23);
-		tree.addNode(85);
-		tree.addNode(54);
-		tree.addNode(12);
-		tree.addNode(34);
-		tree.addNode(112);
+		tree.addNode(3);
+		tree.addNode(9);
+		tree.addNode(20);
+		tree.addNode(15);
+		tree.addNode(7);
+		//tree.addNode(112);
 //		tree.removeNode(85);
 
 		tree.preOrderTraversal(tree.root);

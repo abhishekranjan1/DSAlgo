@@ -20,12 +20,13 @@ public class TopologicalOrdering {
 	}
 	public void dfsRecursive(Vertex root)
 	{
-		root.setVisited(true);
-		for(Vertex v: root.getNeighborList())
-		{
-			if(!v.isVisited())
-			{
-				dfsRecursive(v);
+		if(root.isVisited()) return;
+		else{
+			root.setVisited(true);
+			for(Vertex v : root.getNeighborList()){
+				if(!v.isVisited()){
+					dfsRecursive(v);
+				}
 			}
 		}
 	stack.push(root);

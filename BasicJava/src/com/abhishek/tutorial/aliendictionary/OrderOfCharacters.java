@@ -2,8 +2,6 @@ package com.abhishek.tutorial.aliendictionary;
 
 // A Java program to order of
 // characters in an alien language
-import java.util.*;
-
 // Class to represent a graph
 
 public class OrderOfCharacters

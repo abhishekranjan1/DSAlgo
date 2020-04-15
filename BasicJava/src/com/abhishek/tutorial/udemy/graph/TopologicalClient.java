@@ -38,7 +38,7 @@ List<Vertex> graph = new ArrayList<>();
 			for(int i=0;i<graph.size();i++){
 			
 				Vertex vertex = stack.pop();
-				System.out.println(vertex+"->");
+				System.out.print(vertex+"->");
 			}
 		}
 			else

@@ -18,26 +18,25 @@ private Stack<Vertex> stack;
 			if(!v.isVisited())
 			{
 				 
-				dfsWithStack(v);
-				//dfsRecursive(v);
+				//dfsWithStack(v);
+				dfsRecursive(v);
 			}
 		}
 		
 	}
 	public void dfsRecursive(Vertex root)
 	{
-	    
-		 root.setVisited(true);
-		 System.out.println(root+", ");
-	    
-	    for(Vertex v: root.getNeighborList())
-	    {
-	    	     if(!v.isVisited())
-	    	     {
-	    	    	 	//v.setVisited(true);
-	    	    	 	dfsRecursive(v);
-	    	     }
-	    }
+		if(root.isVisited()) return;
+		else{
+				root.setVisited(true);
+				System.out.print(root+", ");
+				for(Vertex v: root.getNeighborList()){
+					if(!v.isVisited()){
+						dfsRecursive(v);
+					}
+				}
+
+		}
 	}
 	
 	
