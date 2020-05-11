@@ -21,7 +21,7 @@ public class LevelOrderTraversal {
 
 //        List<List<Integer>> paths =  leftSideViewOrder(tree.root);
 //        List<List<Integer>> paths =  rightSideViewOrder(tree.root);
-//        List<List<Integer>> paths =  zigzagOrder(tree.root);
+        System.out.println(zigzagOrder(tree.root));
 //
 //        int level = 0;
 //        for(List<Integer> path : paths){
@@ -32,9 +32,9 @@ public class LevelOrderTraversal {
 //            level++;
 //        }
 
-        System.out.println(verticalOrder(tree.root));
-        System.out.println("TOP View ->"+topView(tree.root));
-        System.out.println("BOTTOM View ->"+bottomView(tree.root));
+//        System.out.println(verticalOrder(tree.root));
+//        System.out.println("TOP View ->"+topView(tree.root));
+//        System.out.println("BOTTOM View ->"+bottomView(tree.root));
     }
 
     public static List<List<Integer>> levelOrder(Node root) {
@@ -117,7 +117,7 @@ public class LevelOrderTraversal {
         Queue<Node> queue1 = new LinkedList<>();
         Queue<Node> queue2 = new LinkedList<>();
         queue1.add(root);
-        boolean leftToRight = false;
+        boolean leftToRight = true;
         while(!queue1.isEmpty()){
             List<Integer> currentPath = new ArrayList<>();
             int levelSize = queue1.size();
@@ -126,14 +126,16 @@ public class LevelOrderTraversal {
                     currentPath.add(node.data);
                     if(leftToRight){
                         if (node.right != null) queue1.add(node.right);
-                        if (node.left != null) queue1.add(node.left);}
+                        if (node.left != null) queue1.add(node.left);
+                        leftToRight = false;
+                    }
                     else{
                         if (node.left != null) queue1.add(node.left);
                         if (node.right != null) queue1.add(node.right);
+                        leftToRight = true;
                 }
             }
             paths.add(currentPath);
-            ;
         }
         return paths;
     }

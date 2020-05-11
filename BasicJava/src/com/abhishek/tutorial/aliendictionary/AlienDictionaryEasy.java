@@ -10,7 +10,7 @@ public class AlienDictionaryEasy {
         //Build the dictionary
         buildDictionary(dict, order);
 
-        //Iterate through the words and check if they are in order or not, so compare themone by one
+        //Iterate through the words and check if they are in order or not, so compare them one by one
         for(int i=1; i< words.length; i++){
             if(!compareWords(words[i-1],words[i], dict)) return false;
         }

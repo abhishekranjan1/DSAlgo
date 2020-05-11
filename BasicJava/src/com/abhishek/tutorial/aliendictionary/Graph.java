@@ -6,10 +6,8 @@ import java.util.Stack;
 // Class to represent a graph
 class Graph
 {
-
     // An array representing the graph as an adjacency list
     private final LinkedList<Integer>[] adjacencyList;
-
     Graph(int nVertices)
     {
         adjacencyList = new LinkedList[nVertices];
