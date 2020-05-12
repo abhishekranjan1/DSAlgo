@@ -1,4 +1,4 @@
-package com.abhishek.tutorial.backtracking.sudoku_1;
+package com.abhishek.tutorial.dynamicprogramming.backtracking.sudoku_1;
 
 public class Sudoku {
 

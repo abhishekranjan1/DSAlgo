@@ -1,4 +1,4 @@
-package com.abhishek.tutorial.backtracking;
+package com.abhishek.tutorial.dynamicprogramming.backtracking;
 
 public class Sudoku {
     public static boolean solveSudoku(int[][] board, int n) {

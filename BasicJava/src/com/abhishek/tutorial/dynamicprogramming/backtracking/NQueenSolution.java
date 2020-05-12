@@ -1,7 +1,4 @@
-package com.abhishek.tutorial.backtracking;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.abhishek.tutorial.dynamicprogramming.backtracking;
 
 public class NQueenSolution {
 

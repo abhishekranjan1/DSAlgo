@@ -1,4 +1,4 @@
-package com.abhishek.tutorial.backtracking;
+package com.abhishek.tutorial.dynamicprogramming.backtracking;
 
 public class NQueenClient {
 
