@@ -21,7 +21,6 @@ public class CoinChange {
             }
         }
         return dp[amount]>amount?-1:dp[amount];
-
     }
 
     private static int coinChangeNoOfWays(int[] coins, int amount) {
