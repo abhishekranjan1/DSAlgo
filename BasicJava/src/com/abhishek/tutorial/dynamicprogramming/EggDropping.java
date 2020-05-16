@@ -11,7 +11,6 @@ public class EggDropping {
             eggFloor[i][1] = 1;
             eggFloor[i][0] = 0;
         }
-
         for (j = 1; j <= k; j++)
             eggFloor[1][j] = j;
         for (i = 2; i <= n; i++)
@@ -29,7 +28,6 @@ public class EggDropping {
         }
         return eggFloor[n][k];
     }
-
     public static void  main(String[] args)
     {
         int n = 2, k = 10;

@@ -8,7 +8,6 @@ public class MatrixChainMultiplication {
         extra column are allocated in m[][].  0th row and 0th
         column of m[][] are not used */
         int m[][] = new int[n][n];
-
         int i, j, k, L, q;
 
         /* m[i, j] = Minimum number of scalar multiplications needed
@@ -34,7 +33,6 @@ public class MatrixChainMultiplication {
                 }
             }
         }
-
         return m[1][n - 1];
     }
 

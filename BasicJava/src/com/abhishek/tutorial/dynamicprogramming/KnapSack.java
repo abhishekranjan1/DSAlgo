@@ -1,5 +1,4 @@
 package com.abhishek.tutorial.dynamicprogramming;
-
 public class KnapSack {
     public void solve(int[] weights, int[] profits, int capacity) {
         int[][] dp  = new int[weights.length+1][capacity+1];
@@ -24,14 +23,12 @@ public class KnapSack {
                 System.out.println("We take item: #"+n);
                 w = w - weights[n];}
              } }
-
     public static void main(String[] args){
         int capacity = 5;
         int[] weights = {4,2,3};
         int[] profits = {10,4,7};
         KnapSack knapsack = new KnapSack();
         knapsack.solve(weights, profits, capacity);
-
     }
 }
 
